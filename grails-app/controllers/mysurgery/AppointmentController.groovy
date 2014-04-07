@@ -4,9 +4,6 @@ class AppointmentController {
 
     def index() {
 
-	system.out.println(params);
-
-
- 	
-	}
+	System.out.println(params);
+    }
 }
