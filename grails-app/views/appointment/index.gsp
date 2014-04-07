@@ -83,13 +83,31 @@
 	<body>
 		<a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div id="status" role="complementary">
-			<h1>Search</h1>
 
-		<form action="demo_form.asp">
-		  Surname: <input type="text" name="Fname"><br>
-		  Dob: <input type="date" name="Dob"><br>
-		  <input type="submit">
-		</form>
+
+<g:if test= "${params.Sname != null}">			
+
+Surname:${params.Sname}<br>
+First Name:${params.Dob}
+Dob:${params.Dob}
+NationalId:${params.Dob}
+GP:${params.Dob}
+
+
+
+</g:if >
+<g:else >
+<h1>Search</h1>
+			<form>
+			  Surname: <input type="text" name="Sname"> <br>
+			  Dob: <input type="date" name="Dob"> <br>
+			<input type="submit">
+			</form>
+</g:else >
+
+
+
+
 		</div>
 
 

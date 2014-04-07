@@ -2,5 +2,11 @@ package mysurgery
 
 class AppointmentController {
 
-    def index() { }
+    def index() {
+
+	system.out.println(params);
+
+
+ 	
+	}
 }
