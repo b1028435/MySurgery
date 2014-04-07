@@ -22,8 +22,6 @@ environments {
             password = "webarch"
             url = "jdbc:mysql://localhost/MySurgery?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8"pooled = true
         }
-
-        }
     }
     test {
         dataSource {
