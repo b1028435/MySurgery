@@ -2,5 +2,7 @@ package mysurgery
 
 class PatientController {
 
-    def index() { }
+    def index() {
+	System.out.println(params);
+ }
 }
