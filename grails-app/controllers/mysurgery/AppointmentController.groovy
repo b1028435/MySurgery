@@ -4,6 +4,20 @@ class AppointmentController {
 
     def index() {
 
-	System.out.println(params);
+
+
+	try  {
+	      def dateval = params.date('Dob','yyyy-MM-dd')
+		System.out.println(params);
+		System.out.println("dateval::${dateval}");
+
+
+		}
+	catch{
+
+		System.out.println(params);
+		System.out.println("dateval::${dateval}");
+
+		}	
     }
 }
