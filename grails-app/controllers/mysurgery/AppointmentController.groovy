@@ -12,12 +12,12 @@ class AppointmentController {
 		System.out.println("dateval::${dateval}");
 
 
-		}
-	catch{
+        }
+	catch (Exception e) {
 
 		System.out.println(params);
 		System.out.println("dateval::${dateval}");
 
-		}	
+	}	
     }
 }
