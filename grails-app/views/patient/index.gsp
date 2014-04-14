@@ -1,113 +1,54 @@
+
+<%@ page import="uk.ac.shu.webarch.MySurgery.Patient" %>
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta name="layout" content="main"/>
-		<title>Welcome to Grails</title>
-		<style type="text/css" media="screen">
-			#status {
-				background-color: #eee;
-				border: .2em solid #fff;
-				margin: 2em 2em 1em;
-				padding: 1em;
-				width: 12em;
-				float: left;
-				-moz-box-shadow: 0px 0px 1.25em #ccc;
-				-webkit-box-shadow: 0px 0px 1.25em #ccc;
-				box-shadow: 0px 0px 1.25em #ccc;
-				-moz-border-radius: 0.6em;
-				-webkit-border-radius: 0.6em;
-				border-radius: 0.6em;
-			}
-
-			.ie6 #status {
-				display: inline; /* float double margin fix http://www.positioniseverything.net/explorer/doubled-margin.html */
-			}
-
-			#status ul {
-				font-size: 0.9em;
-				list-style-type: none;
-				margin-bottom: 0.6em;
-				padding: 0;
-			}
-
-			#status li {
-				line-height: 1.3;
-			}
-
-			#status h1 {
-				text-transform: uppercase;
-				font-size: 1.1em;
-				margin: 0 0 0.3em;
-			}
-
-			#page-body {
-				margin: 2em 1em 1.25em 18em;
-			}
-
-			h2 {
-				margin-top: 1em;
-				margin-bottom: 0.3em;
-				font-size: 1em;
-			}
-
-			p {
-				line-height: 1.5;
-				margin: 0.25em 0;
-			}
-
-			#controller-list ul {
-				list-style-position: inside;
-			}
-
-			#controller-list li {
-				line-height: 1.3;
-				list-style-position: inside;
-				margin: 0.25em 0;
-			}
-
-			@media screen and (max-width: 480px) {
-				#status {
-					display: none;
-				}
-
-				#page-body {
-					margin: 0 1em 1em;
-				}
-
-				#page-body h1 {
-					margin-top: 0;
-				}
-			}
-		</style>
+		<meta name="layout" content="main">
+		<g:set var="entityName" value="${message(code: 'patient.label', default: 'Patient')}" />
+		<title><g:message code="default.list.label" args="[entityName]" /></title>
 	</head>
 	<body>
-		<a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div id="status" role="complementary">
-
-
-<g:if test= "${params.Sname != null}">			
-
-you are booked in ${params.Sname}   ${params.Dob}
-
-
-
-</g:if >
-<g:else >
-<h1>Login</h1>
-			<form>
-			  Surname: <input type="text" name="Sname"> <br>
-			  Dob: <input type="date" name="Dob"> <br>
-			<input type="submit">
-			</form>
-</g:else >
-
-
-
-
+		<a href="#list-patient" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
+		<div class="nav" role="navigation">
+			<ul>
+				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
+				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
+			</ul>
 		</div>
-
-
-		
-	
+		<div id="list-patient" class="content scaffold-list" role="main">
+			<h1><g:message code="default.list.label" args="[entityName]" /></h1>
+			<g:if test="${flash.message}">
+				<div class="message" role="status">${flash.message}</div>
+			</g:if>
+			<table>
+			<thead>
+					<tr>
+					
+						<g:sortableColumn property="patientFName" title="${message(code: 'patient.patientFName.label', default: 'Patient FN ame')}" />
+					
+						<g:sortableColumn property="patientID" title="${message(code: 'patient.patientID.label', default: 'Patient ID')}" />
+					
+						<g:sortableColumn property="patientSName" title="${message(code: 'patient.patientSName.label', default: 'Patient SN ame')}" />
+					
+					</tr>
+				</thead>
+				<tbody>
+				<g:each in="${patientInstanceList}" status="i" var="patientInstance">
+					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+					
+						<td><g:link action="show" id="${patientInstance.id}">${fieldValue(bean: patientInstance, field: "patientFName")}</g:link></td>
+					
+						<td>${fieldValue(bean: patientInstance, field: "patientID")}</td>
+					
+						<td>${fieldValue(bean: patientInstance, field: "patientSName")}</td>
+					
+					</tr>
+				</g:each>
+				</tbody>
+			</table>
+			<div class="pagination">
+				<g:paginate total="${patientInstanceCount ?: 0}" />
+			</div>
+		</div>
 	</body>
 </html>
