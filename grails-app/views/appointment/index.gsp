@@ -26,6 +26,8 @@
 					
 						<g:sortableColumn property="appointment" title="${message(code: 'appointment.appointment.label', default: 'Appointment')}" />
 					
+						<g:sortableColumn property="arived" title="${message(code: 'appointment.arived.label', default: 'Arived')}" />
+					
 						<th><g:message code="appointment.doctor.label" default="Doctor" /></th>
 					
 						<th><g:message code="appointment.patient.label" default="Patient" /></th>
@@ -37,6 +39,8 @@
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
 						<td><g:link action="show" id="${appointmentInstance.id}">${fieldValue(bean: appointmentInstance, field: "appointment")}</g:link></td>
+					
+						<td><g:formatBoolean boolean="${appointmentInstance.arived}" /></td>
 					
 						<td>${fieldValue(bean: appointmentInstance, field: "doctor")}</td>
 					

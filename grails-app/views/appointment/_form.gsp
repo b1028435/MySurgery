@@ -10,6 +10,14 @@
 	<g:datePicker name="appointment" precision="day"  value="${appointmentInstance?.appointment}"  />
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: appointmentInstance, field: 'arived', 'error')} ">
+	<label for="arived">
+		<g:message code="appointment.arived.label" default="Arived" />
+		
+	</label>
+	<g:checkBox name="arived" value="${appointmentInstance?.arived}" />
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: appointmentInstance, field: 'doctor', 'error')} required">
 	<label for="doctor">
 		<g:message code="appointment.doctor.label" default="Doctor" />

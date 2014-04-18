@@ -32,6 +32,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${appointmentInstance?.arived}">
+				<li class="fieldcontain">
+					<span id="arived-label" class="property-label"><g:message code="appointment.arived.label" default="Arived" /></span>
+					
+						<span class="property-value" aria-labelledby="arived-label"><g:formatBoolean boolean="${appointmentInstance?.arived}" /></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${appointmentInstance?.doctor}">
 				<li class="fieldcontain">
 					<span id="doctor-label" class="property-label"><g:message code="appointment.doctor.label" default="Doctor" /></span>
