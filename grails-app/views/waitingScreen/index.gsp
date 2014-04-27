@@ -28,7 +28,8 @@
 
 
 
-				%{--<g:if test= "formatDate date='${date}' >=  <g:formatDate date='${appointment.appointment}'">--}%
+				
+                               <g:if test= "${new Date() < appointment.appointment}">
 					<tr style="background-color:#fd6864">			
 						<td>${appointment.doctor?.doctorName}</td>
 						<td>${appointment.patient?.patientSName}</td>
@@ -36,7 +37,7 @@
 					</tr>
 
 
-				%{--</g:if>	--}%
+				</g:if>
 
 		
 
