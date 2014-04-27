@@ -1,0 +1,9 @@
+*.iws
+*Db.properties
+*Db.script
+.settings
+stacktrace.log
+target
+/plugins
+/web-app/plugins
+*~
