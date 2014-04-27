@@ -1,0 +1,19 @@
+package uk.ac.shu.webarch.MySurgery
+
+class WaitingScreenController {
+	def index() { 
+		def result = [:]
+		println("Index ${params}");
+		result.l = Appointment.findAll('from MySurgery.Appointment as l where l.appointment like ?',['%'])
+	
+
+	return result
+
+	}
+
+
+
+
+
+
+}
