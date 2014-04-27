@@ -15,7 +15,7 @@ if(request.method=="POST"){
 		if(!params.checkedin){params.checkedin = 0}
 		def a = new Appointment(doctor : params.doctor,                             
 		                     patient : params.patient,
-				     appointment : params.date('date','yyyy-MM-dd'),//Ian help
+				     appointment : params.date('date',"yyyy-MM-dd'T'HH:mm"),//Ian help
 				     Arived : params.checkedin)
 
 	if ( a.save() ) {
