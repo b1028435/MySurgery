@@ -5,7 +5,8 @@ class WaitingScreenController {
 	def index() { 
 		def result = [:]
 		println("Index ${params}");
-		result.a = Appointment.findAll()
+		// result.a = Appointment.findAll([sort:'appointment',order:'asc'])
+                result.a = Appointment.findAll("from Appointment order by appointment asc");
 	return result
 
 	}

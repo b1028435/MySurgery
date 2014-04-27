@@ -3,7 +3,7 @@ package uk.ac.shu.webarch.MySurgery
 class Appointment {
   Doctor doctor
   Patient patient
-  DateTime  appointment
+  Date appointment
   boolean Arived
 
     
@@ -11,4 +11,22 @@ class Appointment {
 
      static constraints = {
     }
-}	
+
+  def calculateStatus(){
+    println("calculateStatus ${id} ${patient.patientSName}  apptTime:${appointment} arrived:${Arived}")
+
+    def result = "Future"
+
+    if(new Date()>appointment){
+      if(Arived) {
+        result="Arrived"
+      }
+      else{
+        result ="Late"
+      }
+     }
+     println("returning${result}")
+     return result
+   }
+ }	
+

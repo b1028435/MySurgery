@@ -15,7 +15,7 @@
 		<g:message code="appointment.arived.label" default="Arived" />
 		
 	</label>
-	<g:checkBox name="arived" value="${appointmentInstance?.arived}" />
+	<g:checkBox name="Arived" value="${appointmentInstance?.Arived}" />
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: appointmentInstance, field: 'doctor', 'error')} required">
