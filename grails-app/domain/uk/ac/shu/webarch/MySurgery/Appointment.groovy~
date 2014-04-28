@@ -19,10 +19,10 @@ class Appointment {
 
     if(new Date()>appointment){
       if(Arived) {
-        result="Arrived"
+        result="Arrived"// if time is more than now then  display in this
       }
       else{
-        result ="Late"
+        result ="Late"// if time is more than now then  display in this
       }
      }
      println("returning${result}")

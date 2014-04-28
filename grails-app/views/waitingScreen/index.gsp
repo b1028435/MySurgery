@@ -23,7 +23,7 @@
 
 			<g:if test="${appointment.calculateStatus()=='Late'}"> <!-- calling calculate status -->
 			<tr style="background-color:#fd6864">	<!--table row changed to red-->		
-						<td>${appointment.doctor?.doctorName}</td> <!-- Show doctor name -->
+						<td><g:link controller="appointment" action="edit" id="${appointment.id}">${appointment.doctor?.doctorName}</g:link></td> <!-- Show doctor name -->
 						<td>${appointment.patient?.patientSName}</td><!-- show patient name -->
 						<td><g:formatDate date="${appointment.appointment}" type="datetime" style="SHORT"/></td>
 					</tr>
@@ -31,7 +31,7 @@
 
 			<g:if test="${appointment.calculateStatus()=='Arrived'}"> <!-- calling calculate status -->
 			<tr style="background-color:#9aff99">	<!--table row changed to green-->		
-						<td>${appointment.doctor?.doctorName}</td> <!-- Show doctor name -->
+						<td><g:link controller="appointment" action="edit" id="${appointment.id}">${appointment.doctor?.doctorName}</g:link></td> <!-- Show doctor name -->
 						<td>${appointment.patient?.patientSName}</td><!-- show patient name -->
 						<td><g:formatDate date="${appointment.appointment}" type="datetime" style="SHORT"/></td>
 					</tr>
