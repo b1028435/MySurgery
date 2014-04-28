@@ -4,7 +4,7 @@
 	</head>
 	 <body>
 	  <h1>Create Patient</h1>
-	  <div><a href="index.gsp">booking Index</a></div>
+	  <div><a href="index.gsp">Patient Index</a></div>
 		  <g:form action="create">
 			<label>id</label><input name="pid" type="text"/><br>	
 			<label>first name</label><input name="fname" type="text"/><br>

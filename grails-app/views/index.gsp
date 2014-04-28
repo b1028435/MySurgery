@@ -9,7 +9,8 @@
 				border: .2em solid #fff;
 				margin: 2em 2em 1em;
 				padding: 1emgrails controller list;
-				width: 12em;
+				width: 18em;
+				height: 12em;
 				float: left;
 				-moz-box-shadow: 0px 0px 1.25em #ccc;
 				-webkit-box-shadow: 0px 0px 1.25em #ccc;
@@ -89,32 +90,25 @@
 		
 		<div class="status" role="complementary">
 		
-			<h1><g:link controller="appointment" action="index">Appiontment Scaffold</g:link></h1>
+			<h1><g:link controller="appointment" action="index">Appiontment Scaffold</g:link></h1><!--links to Appiontment index -->
+			<br>
+			<h1><g:link controller="WaitingScreen" action="index">Waiting Screen</g:link></h1><!--links to WaitingScreen index -->
 			
 		</div>
-		<div id="status" role="complementary">
-			<h1><g:link controller="doctor" action="index">Doctor Scaffold</g:link></h1>
+		<div class="status" role="complementary">
+			<h1><g:link controller="doctor" action="index">Doctor Scaffold</g:link></h1><!--links to Doctor index -->
+			<br>
+			<h1><g:link controller="NewDoctor" action="index">Doctor index</g:link></h1><!--links to NewDoctor index -->
+			
+		</div>
+		<div class="status" role="complementary">
+			<h1><g:link controller="patient" action="index">Patient Scaffold</g:link></h1><!--links to Patient index -->
+			<br>
+			<h1><g:link controller="NewPatient" action="index">New Patient</g:link></h1><!--links to NewPatient index -->
 			
 			
 		</div>
-		<div id="status" role="complementary">
-			<h1><g:link controller="patient" action="index">Patient Scaffold</g:link></h1>
-			
-			
-		</div>
-		<div id="status" role="complementary">
-			<h1>Application Status</h1>
-			
-			
-		</div>
-		<div id="page-body" role="main">
-			<h1>Welcome to Grails</h1>
-			<p>Congratulations, you have successfully started your first Grails application! At the moment
-			   this is the default page, feel free to modify it to either redirect to a controller or display whatever
-			   content you may choose. Below is a list of controllers that are currently deployed in this application,
-			   click on each to execute its default action:</p>
 
-			
-		</div>
+
 	</body>
 </html>

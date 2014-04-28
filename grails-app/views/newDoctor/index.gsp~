@@ -2,18 +2,18 @@
 		<meta name="layout" content="main">
 	</head>
 	<body>
-		<h1>Patient Screen</h1>
+		<h1>Doctor Screen</h1>
 		<p><a href="create.gsp">Create Doctor</a></p>
 		<table border="1">
 			<tr>
 				
-<th>id</th>
+
 				<th>Doctor ID</th>
 				<th>Doctor name</th>
 				
 				
 			</tr>
-			<g:each in="${d}" var="doctor">
+			<g:each in="${d}" var="doctor"><!--Loops till all doctor have been added-->
 
 				<tr>	
 					<td>${doctor.doctorID}</td>		

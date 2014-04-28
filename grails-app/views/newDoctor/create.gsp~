@@ -2,6 +2,7 @@
 	<head>
 		<meta name="layout" content="main">
 	</head>
+
 	 <body>
 	  <h1>Create Doctor</h1>
 	  <div><a href="index.gsp">Doctor Index</a></div>
