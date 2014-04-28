@@ -89,16 +89,16 @@
 		
 		<div class="status" role="complementary">
 		
-			<h1><g:link controller="appointment" action="index">Appiontment Grid</g:link></h1>
+			<h1><g:link controller="appointment" action="index">Appiontment Scaffold</g:link></h1>
 			
 		</div>
 		<div id="status" role="complementary">
-			<h1>Application Status</h1>
+			<h1><g:link controller="doctor" action="index">Doctor Scaffold</g:link></h1>
 			
 			
 		</div>
 		<div id="status" role="complementary">
-			<h1>Application Status</h1>
+			<h1><g:link controller="patient" action="index">Patient Scaffold</g:link></h1>
 			
 			
 		</div>
